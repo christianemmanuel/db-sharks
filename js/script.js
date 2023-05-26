@@ -79,7 +79,7 @@ $(document).ready(function () {
     ]
   });
 
-  $('.previous-matches-list').slick({
+  $('.previous-matches-slider').slick({
     cssEase: 'linear',
     dots: true,
     variableWidth: true,
@@ -179,38 +179,38 @@ $(document).ready(function () {
     $('.nav-links').slideToggle('fast');
   })
 
-  let form = document.querySelector("form");
-  if(form) {
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
+  // let form = document.querySelector("form");
+  // if(form) {
+  //   form.addEventListener('submit', (e) => {
+  //     e.preventDefault();
   
-      var submitBtn = document.querySelector("#btn-subscribe");
+  //     var submitBtn = document.querySelector("#btn-subscribe");
       
-      submitBtn.value = "Submiting..";
-      submitBtn.setAttribute("disabled", "");
+  //     submitBtn.value = "Submiting..";
+  //     submitBtn.setAttribute("disabled", "");
   
-      let data = new FormData(form);
-      fetch("https://script.google.com/macros/s/AKfycbxGUjF-QspgtIrL_bjyX843FrkVYSGnp_uTDxtHPgIQmE6FtgRe-VrNywYAuG2KX0rz/exec", {
-        method: "POST",
-        body: data,
-        crossorigin: true,    
-        mode: 'no-cors'
-      })
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById("email").value = ""
+  //     let data = new FormData(form);
+  //     fetch("https://script.google.com/macros/s/AKfycbxGUjF-QspgtIrL_bjyX843FrkVYSGnp_uTDxtHPgIQmE6FtgRe-VrNywYAuG2KX0rz/exec", {
+  //       method: "POST",
+  //       body: data,
+  //       crossorigin: true,    
+  //       mode: 'no-cors'
+  //     })
+  //     .then(res => res.text())
+  //     .then(data => {
+  //       document.getElementById("email").value = ""
   
-        document.getElementById("msg").innerHTML = `<span class="msg">Thank you for subscribing!!!</span>`
+  //       document.getElementById("msg").innerHTML = `<span class="msg">Thank you for subscribing!!!</span>`
   
-        setTimeout(function () {
-          document.querySelector(".msg").remove();
-        }, 5000)
+  //       setTimeout(function () {
+  //         document.querySelector(".msg").remove();
+  //       }, 5000)
   
-        submitBtn.removeAttribute('disabled');
-        submitBtn.value = "Submit"
-      });
-    })
-  }
+  //       submitBtn.removeAttribute('disabled');
+  //       submitBtn.value = "Submit"
+  //     });
+  //   })
+  // }
 
   $('.dropdown').click(function (e) {
     e.preventDefault();
