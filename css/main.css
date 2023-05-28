@@ -1,11 +1,6 @@
 * {
   box-sizing: border-box; }
 
-body {
-  background-color: #FFFFFF;
-  color: #1B1B1B;
-  font-family: 'Open Sans'; }
-
 .container {
   display: flex;
   flex-direction: column;
@@ -428,7 +423,7 @@ span.msg {
   display: block;
   padding-left: 5px; }
 
-.db-page {
+body {
   background-color: #1B1B1B;
   color: #FFFFFF;
   font-family: 'Eurostile-Regular';
